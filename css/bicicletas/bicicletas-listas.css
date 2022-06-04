@@ -13,9 +13,14 @@
 .bicicletas-listas ul {
   display: flex;
   gap: 40px;
-  padding: 0 20px;
+  padding: 0 20px 20px 20px;
   max-width: 1400px;
   margin: 0 auto;
+  overflow-x: auto;
+}
+
+.bicicletas-listas li {
+  min-width: 280px;
 }
 
 .bicicletas-listas a {
@@ -39,8 +44,22 @@
   height: 8px;
   background: var(--cor-p1);
   margin-right: 8px;
+  transition: width 0.2s;
+}
+
+.bicicletas-listas a:hover h3::before {
+  width: 24px;
 }
 
 .bicicletas-listas li span {
   padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .bicicletas-listas {
+    padding-bottom: 60px;
+  }
+  .bicicletas-listas ul {
+    gap: 20px;
+  }
 }
